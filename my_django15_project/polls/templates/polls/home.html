@@ -1,0 +1,28 @@
+<h1>Bike Repositioning</h1>
+
+
+<form method="POST" action= {% url 'successpage' %}> 
+{% csrf_token %}
+
+
+
+
+Select Cluster: <select name="cluster">
+	{% for e in cl %}
+    <option>{{e}}</option>
+    
+    {% endfor %}
+  </select><br><br>
+
+Select Strategy: <select name="strategy">
+	{% for e in sl %}
+    <option>{{e}}</option>
+    
+    {% endfor %}
+  </select><br><br>
+
+number of trucks (between 1 and 50): <input type="number" name="trucks"><br><br>
+
+
+<input type="submit" name="Submit"/>
+</form>
